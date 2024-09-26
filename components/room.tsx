@@ -26,7 +26,12 @@ export function Room({
           layerIds: new LiveList([]),
         }}
         id={roomId}
-        initialPresence={{ cursor: null, selection: [] }}
+        initialPresence={{
+          cursor: null,
+          selection: [],
+          pencilDraft: null,
+          penColor: null,
+        }}
       >
         <ClientSideSuspense fallback={fallback}>{children}</ClientSideSuspense>
       </RoomProvider>

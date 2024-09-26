@@ -4,7 +4,6 @@ import {
   Circle,
   MousePointer2,
   Pencil,
-  Redo,
   Redo2,
   Square,
   StickyNote,

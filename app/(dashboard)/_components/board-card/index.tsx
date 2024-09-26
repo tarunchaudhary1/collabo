@@ -46,11 +46,11 @@ export default function BoardCard({
   const toggleFavourite = () => {
     if (isFavourite) {
       onUnfavourite({ id }).catch((error) =>
-        toast.error("Already unfavourated")
+        toast.error("Already unfavourated", error)
       );
     } else {
       onFavourite({ id, orgId }).catch((error) =>
-        toast.error("Already favourated")
+        toast.error("Already favourated", error)
       );
     }
   };
@@ -63,7 +63,6 @@ export default function BoardCard({
           <Actions id={id} title={title} side="right">
             <button className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity px-3 py-2 outline-none">
               <MoreHorizontal className="text-white opacity-75 hover:opacity-100 transition-opacity" />
-              "
             </button>
           </Actions>
         </div>
